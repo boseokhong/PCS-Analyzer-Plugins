@@ -41,6 +41,10 @@ The table below is generated automatically from `catalog.json`.
 
 <!-- PLUGIN_TABLE_START -->
 
+| Plugin | ID | Version | Status | Min. PCS Analyzer | Category | License | Source |
+| --- | --- | ---: | --- | ---: | --- | --- | --- |
+| Coordination Polar Viewer | `coordination_polar_viewer` | 0.1.2 | Active | 1.3.4 | Structure Analysis | BSD-3-Clause | [Repository](https://github.com/boseokhong/PCS-Analyzer-Coordination-Polar-Viewer) |
+
 <!-- PLUGIN_TABLE_END -->
 
 ---
