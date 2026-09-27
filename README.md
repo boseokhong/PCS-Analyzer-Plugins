@@ -34,6 +34,17 @@ PCS Analyzer uses the raw `catalog.json` file from the `main` branch as its offi
 https://raw.githubusercontent.com/boseokhong/PCS-Analyzer-Plugins/main/catalog.json
 ```
 
+---
+## Available Plugins
+
+The table below is generated automatically from `catalog.json`.
+
+<!-- PLUGIN_TABLE_START -->
+
+<!-- PLUGIN_TABLE_END -->
+
+---
+
 ## Plugin release conventions
 
 Recommended conventions:

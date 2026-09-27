@@ -1,0 +1,43 @@
+name: Update plugin table
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - catalog.json
+      - scripts/update_readme_plugin_table.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update README plugin table
+        run: python scripts/update_readme_plugin_table.py
+
+      - name: Commit README if changed
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "README plugin table is already up to date."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add README.md
+          git commit -m "Update plugin catalog table"
+          git push
